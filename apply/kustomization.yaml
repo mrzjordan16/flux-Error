@@ -1,0 +1,24 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: flux-error-repo
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://github.com/scott-grimes/fluxErrorRepo
+  ref:
+    branch: master
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: demo
+  namespace: flux-system
+spec:
+  interval: 10m
+  serviceAccountName: minikoob
+  sourceRef:
+    kind: GitRepository
+    name: flux-error-repo
+  path: "./fails"
+  prune: true

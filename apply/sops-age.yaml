@@ -1,0 +1,8 @@
+# generated via https://fluxcd.io/docs/guides/mozilla-sops/#encrypting-secrets-using-age
+apiVersion: v1
+data:
+  age.agekey: IyBjcmVhdGVkOiAyMDIyLTA2LTE2VDExOjQ0OjQ3LTA0OjAwCiMgcHVibGljIGtleTogYWdlMXY4M3ZwbndtZGQwdmd3ajBjcWpncGt4eTRqbmF2ajJkZ3F5eWt3cnJrMjQ0N3B6c3RnbnNudTVja3oKQUdFLVNFQ1JFVC1LRVktMVlDOUpKSDdDUktOQVNTMFlRSzU4N0FGUTM3TjJFRzU2REUzTTRQMENUN1hIVkc3S1pFTVFIQUdRUTIK
+kind: Secret
+metadata:
+  name: sops-age
+  namespace: flux-system

@@ -1,0 +1,6 @@
+# has no bound permissions
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: minikoob
+  namespace: flux-system

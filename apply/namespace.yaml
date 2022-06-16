@@ -1,0 +1,5 @@
+# flux will attempt, but fail, to deploy a secret into this namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: foobar
